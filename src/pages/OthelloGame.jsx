@@ -4,7 +4,7 @@ import { useState } from 'react';
 function OthelloGame() {
   const [board, setBoard] = useState(Array(8).fill(Array(8).fill(null)));
   const handleCellClick = (row, col) => {
-    const newBoard = [...board];
+    const newBoard = board.map(row => [...row]);
     newBoard[row][col] = 'X'; // Placeholder for player's move
     setBoard(newBoard);
   };
