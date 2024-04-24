@@ -12,7 +12,7 @@ function OthelloGame() {
   return (
     <Box p="4">
       <Heading as="h1" size="xl">Othello Game</Heading>
-      <Grid templateColumns="repeat(8, 1fr)" gap={1}>
+      <Grid templateColumns="repeat(8, 1fr)" gap={2}>
         {board.map((row, rowIndex) => row.map((cell, colIndex) => (
           <GridItem w="40px" h="40px" bg="gray.200" key={`${rowIndex}-${colIndex}`}>
             <Button onClick={() => handleCellClick(rowIndex, colIndex)}>{cell}</Button>
